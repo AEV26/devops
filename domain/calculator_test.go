@@ -157,3 +157,39 @@ func TestDiv(t *testing.T) {
 		}
 	})
 }
+
+func TestPow(t *testing.T) {
+	t.Run("Testing with integers", func(t *testing.T) {
+		cases := []struct {
+			x, y, want int
+		}{
+			{1, 2, 1},
+			{-1, 1, -1},
+			{2, 2, 4},
+		}
+
+		for i, c := range cases {
+			t.Run(fmt.Sprintf("Case_%d", i), func(t *testing.T) {
+				res := calculator.Pow(c.x, c.y)
+				assert.Equal(t, res, c.want)
+			})
+		}
+	})
+
+	t.Run("Testing with float", func(t *testing.T) {
+		cases := []struct {
+			x, y, want float64
+		}{
+			{1., 2., 1.},
+			{-1., 1., -1.},
+			{2., 2., 4.},
+		}
+
+		for i, c := range cases {
+			t.Run(fmt.Sprintf("Case_%d", i), func(t *testing.T) {
+				res := calculator.Pow(c.x, c.y)
+				assert.Equal(t, res, c.want)
+			})
+		}
+	})
+}

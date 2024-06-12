@@ -14,7 +14,7 @@ func main() {
 	fmt.Scanf("%g %g", &x, &y)
 
 	fmt.Println("Введите номер операции")
-	fmt.Print("(1 - Add, 2 - Sub, 3 - Mul, 4 - Div): ")
+	fmt.Print("(1 - Add, 2 - Sub, 3 - Mul, 4 - Div, 5 - Pow): ")
 
 	var op int
 	fmt.Scanf("%d", &op)
@@ -29,6 +29,8 @@ func main() {
 		res = calculator.Mul(x, y)
 	case 4:
 		res = calculator.Div(x, y)
+	case 5:
+		res = calculator.Pow(x, y)
 	default:
 		log.Fatal("Нет операции с таким номером")
 	}
