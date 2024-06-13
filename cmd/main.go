@@ -36,4 +36,5 @@ func main() {
 	}
 
 	fmt.Println(res)
+	fmt.Println("До свидания пользователь!")
 }
