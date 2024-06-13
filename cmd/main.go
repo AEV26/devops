@@ -9,6 +9,7 @@ import (
 func main() {
 
 	fmt.Println("Привет пользователь!")
+	fmt.Println("Это приложение калькулятор.")
 	fmt.Print("Введите два числа: ")
 	var x, y float64
 	fmt.Scanf("%g %g", &x, &y)
@@ -36,4 +37,5 @@ func main() {
 	}
 
 	fmt.Println(res)
+	fmt.Println("До свидания пользователь!")
 }
